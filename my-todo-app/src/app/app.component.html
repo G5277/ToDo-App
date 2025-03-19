@@ -1,0 +1,54 @@
+<!-- The heading -->
+<div class = "container-fluid">
+
+  <div class = "row bg-dark align-items-center" style = "height:80px">
+    <div class = "col-1"></div>
+    <div class = "col-6 text-light h2">
+      Ok. Here's the Plan~!
+    </div>
+  </div>
+
+
+  <!-- Add Task Input Box -->
+  <div class="row mt-1" style="height:80px;">
+
+    <div class="col-3 d-none col-md-3 d-md-block"></div> 
+
+    <div class="col-12 col-md-6 bg-dark 
+                d-flex justify-content-center 
+                align-items-center text-light h3">
+
+      <input  [(ngModel)]="newTask" type="text"
+              placeholder="Add Task Here"
+              value="" class="d-flex form-control form-control flex-grow-1 me-2"
+              style="width:300px;"> 
+      
+      <div class="col-1"></div> 
+
+      <button (click)=  "addToList()"  
+              class= "btn btn-light 
+                      text-dark"> 
+              ADD TASK
+      </button> 
+    </div>
+    <div class="col-3 d-none col-md-3 d-md-block"></div> 
+  </div> 
+
+
+  <!-- Final Task List  -->
+  <div *ngFor = "let x of items; let index = index;"
+            class = "row mt-1" style = "height:80px;">
+
+      <div class = "col-3 d-none col-md-3 d-md-block"></div>
+      
+      <div class = "col-12 col-md-6 bg-dark d-flex justify-content-center
+                    align-items-center text-light h3">
+      
+          <div class = "col-9 text-light h2">{{x}}</div>
+
+          <input (click) = "deleteTask(index)" type = "button" value = "Delete" class = "col-2 btn btn-danger">
+      </div>
+
+      <div class = "col-3 d-none col-md-3 d-md-block"></div>
+  </div>
+</div> 

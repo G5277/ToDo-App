@@ -1,0 +1,37 @@
+# Node.js dependencies
+node_modules/
+package-lock.json
+dist/
+npm-debug.log*
+yarn-error.log*
+
+# Angular build artifacts
+.angular/
+.vscode/
+coverage/         # Test coverage reports
+*.log             # Log files
+*.tmp             # Temp files
+
+# Django dependencies
+venv/
+__pycache__/
+db.sqlite3        # Local database (use PostgreSQL in production)
+*.pyc
+*.pyo
+*.log
+*.sqlite3
+
+# Django environment variables
+.env             # Secrets & API keys
+*.pem           # SSL certificates (if any)
+
+# IDE-specific files
+.idea/
+*.swp           # Vim swap files
+.DS_Store       # macOS metadata
+Thumbs.db       # Windows metadata
+
+Pipfile
+package.json
+.hintrc
+my-todo-app/package.json
